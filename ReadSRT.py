@@ -68,4 +68,4 @@ class SRTReader:
             if timestamp >= block['startTime'] and timestamp <= block['endTime']:
                 return block['textLine']
             
-        return 'The timestamp does not exists.'
+        return 'The timestamp does not exist.'
