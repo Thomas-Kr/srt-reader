@@ -52,14 +52,14 @@ class SRTReader:
         return len(self.srtBlocks)
     
     def getBlockDuration(self, index: int) -> datetime:     
-        startTime = self.srtBlocks[index]['startTime']
-        endTime = self.srtBlocks[index]['endTime']
+        startTime = self.srtBlocks[index-1]['startTime']
+        endTime = self.srtBlocks[index-1]['endTime']
         
         difference = datetime.combine(datetime.today(), endTime) - datetime.combine(datetime.today(), startTime)
         return difference
             
     def getTextByIndex(self, index: int) -> str:
-        return self.srtBlocks[index]['textLine']
+        return self.srtBlocks[index-1]['textLine']
     
     def getTextByTime(self, timestamp: str) -> str:
         timestamp = datetime.strptime(timestamp, '%H:%M:%S,%f').time()
