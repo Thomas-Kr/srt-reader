@@ -69,7 +69,3 @@ class SRTReader:
                 return block['textLine']
             
         return 'The timestamp does not exists.'
-    
-reader = SRTReader('example.srt')
-
-print(reader.getTextLines())
