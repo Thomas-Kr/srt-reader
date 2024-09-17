@@ -1,5 +1,5 @@
 # SRT Reader.
-SRT Reader is a module that reads SRT files and provides various functions for working with them.
+SRT Reader is a module that parses SRT files and provides various functions for working with them.
 
 ## Features
 
@@ -12,7 +12,7 @@ SRT Reader is a module that reads SRT files and provides various functions for w
 ## Requirements
 
 - Python 3.6+
-- No external dependencies required.
+- No external dependencies are required.
 
 ## Installation
 
