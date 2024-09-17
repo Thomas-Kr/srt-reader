@@ -4,32 +4,32 @@ from ReadSRT import SRTReader
 reader = SRTReader('example.srt')
 
 # Get array of all text lines from SRT file
-textLines = reader.getTextLines()
-print(textLines, '\n')
+text_lines = reader.get_text_lines()
+print(text_lines, '\n')
 
 # Get number of blocks in SRT file
-blocksCount = reader.getBlocksCount()
-print(blocksCount, '\n')
+blocks_count = reader.get_blocks_count()
+print(blocks_count, '\n')
 
 # Get duration of block (returns datetime.timedelta)
-thirdBlockDuration = reader.getBlockDuration(3)
-print(thirdBlockDuration, '\n')
+third_block_duration = reader.get_block_duration(3)
+print(third_block_duration, '\n')
 
 # Get text lines (array of strings) by block index
-secondTextLine = reader.getTextByIndex(2)
-print(secondTextLine, '\n')
+second_text_line = reader.get_text_by_index(2)
+print(second_text_line, '\n')
 
-# Get text lines (array of strins) by timestamp
-firstSecTextLine = reader.getTextByTime('00:00:03,500')
-print(firstSecTextLine, '\n')
+# Get text lines (array of strings) by timestamp
+first_sec_text_line = reader.get_text_by_time('00:00:03,500')
+print(first_sec_text_line, '\n')
 
 '''
-srtBlocks = [block, block, block, ...]
+srt_blocks = [block, block, block, ...]
 
 block = {
     'index': int,
-    'startTime': datetime,        
-    'endTime': datetime,
-    'textLine': []
+    'start_time': datetime,        
+    'end_time': datetime,
+    'text_line': []
 }
 '''
